@@ -62,7 +62,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         title: const Center(
           child: Text(
             'trendencias',
-            style: TextStyle(color: Colors.black),
+            style: TextStyle(color: Colors.black, fontFamily: 'Alexandria'),
           ),
         ),
       ),
@@ -70,19 +70,16 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         Container(
           height: 1000,
           width: 392,
-          color: Colors.lightBlue,
           child: Column(
             children: [
               Row(children: [
                 Container(
                   width: 392,
                   height: 135,
-                  color: Colors.white,
                   child: Column(
                     children: [
                       Row(children: [
                         Container(
-                            color: Colors.white,
                             width: 140,
                             height: 135,
                             alignment: Alignment.center,
@@ -98,10 +95,12 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                             Row(
                               children: [
                                 Padding(
-                                  padding: const EdgeInsets.all(4),
+                                  padding: const EdgeInsets.all(5),
                                   child: Column(children: const [
                                     Text("3.530",
-                                        style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                                        style: TextStyle(
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.bold)),
                                     Text(
                                       "publicaciones",
                                       style: TextStyle(color: Colors.grey),
@@ -109,10 +108,12 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                                   ]),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.all(4),
+                                  padding: const EdgeInsets.all(5),
                                   child: Column(children: const [
                                     Text("53,4 mil",
-                                        style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                                        style: TextStyle(
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.bold)),
                                     Text(
                                       "seguidores",
                                       style: TextStyle(color: Colors.grey),
@@ -120,10 +121,12 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                                   ]),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.all(4),
+                                  padding: const EdgeInsets.all(5),
                                   child: Column(children: const [
                                     Text("192",
-                                        style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                                        style: TextStyle(
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.bold)),
                                     Text(
                                       "seguidos",
                                       style: TextStyle(color: Colors.grey),
@@ -131,7 +134,36 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                                   ]),
                                 ),
                               ],
-                            )
+                            ),
+                            Row(children: [
+                              MaterialButton(
+                                padding: const EdgeInsets.all(5),
+                                minWidth: 130.0,
+                                highlightColor: Colors.amber,
+                                height: 30.0,
+                                onPressed: () {},
+                                color: Colors.white,
+                                child: const Text('Enviar mensaje', style: TextStyle(fontSize: 15),),
+                              ),
+                              MaterialButton(
+                                padding: const EdgeInsets.fromLTRB(5,0,5,0),
+
+                                minWidth: 0,
+
+                                height: 30,
+                                color: Colors.white,
+                                onPressed: () {},
+                                child: const Icon(Icons.person_add_alt_1, size: 25,),
+                              ),
+                              MaterialButton(
+                                padding: const EdgeInsets.fromLTRB(5, 0, 5, 0),
+                                minWidth: 0,
+                                height: 30,
+                                color: Colors.white,
+                                onPressed: () {},
+                                child: const Icon(Icons.arrow_drop_down, size: 30,),
+                              )
+                            ]),
                           ],
                         ),
                       ]),
@@ -139,10 +171,9 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   ),
                 ),
               ]),
-              Container(
+              SizedBox(
                 width: 392,
                 height: 150,
-                color: Colors.white,
                 child: Column(
                   children: [
                     Column(
