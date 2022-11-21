@@ -77,9 +77,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 Container(
                   width: 392,
                   height: 135,
-                  color: Colors.green,
+                  color: Colors.white,
                   child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Row(children: [
                         Container(
@@ -94,6 +93,47 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                                   width: 110,
                                   alignment: Alignment.center),
                             )),
+                        Column(
+                          children: [
+                            Row(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.all(4),
+                                  child: Column(children: const [
+                                    Text("3.530",
+                                        style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                                    Text(
+                                      "publicaciones",
+                                      style: TextStyle(color: Colors.grey),
+                                    )
+                                  ]),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(4),
+                                  child: Column(children: const [
+                                    Text("53,4 mil",
+                                        style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                                    Text(
+                                      "seguidores",
+                                      style: TextStyle(color: Colors.grey),
+                                    )
+                                  ]),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(4),
+                                  child: Column(children: const [
+                                    Text("192",
+                                        style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                                    Text(
+                                      "seguidos",
+                                      style: TextStyle(color: Colors.grey),
+                                    )
+                                  ]),
+                                ),
+                              ],
+                            )
+                          ],
+                        ),
                       ]),
                     ],
                   ),
@@ -113,15 +153,16 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                             style: TextStyle(
                                 fontSize: 19, fontWeight: FontWeight.bold),
                           ),
-                          Text("Sitio web de noticias y medios de counicación",
-                          style: TextStyle(fontSize: 16, color: Colors.grey),),
+                          Text(
+                            "Sitio web de noticias y medios de counicación",
+                            style: TextStyle(fontSize: 16, color: Colors.grey),
+                          ),
                           Text(
                             "Moda. Belleza. Street Style. Compras. Celebrities."
                             "\nAlfombras Rojas. Feminismo."
                             "\niglink.co/Trendencias"
                             "\nCalle Jenner 3, 3º, Madrid, Spain",
-                            style: TextStyle(
-                                fontSize: 17),
+                            style: TextStyle(fontSize: 17),
                           ),
                         ]),
                   ],
