@@ -223,123 +223,112 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               SizedBox(
                 width: 392,
                 height: 130,
-                child: ListView(scrollDirection: Axis.horizontal, children: <
-                    Widget>[
-                  Container(
-                    padding: const EdgeInsets.all(10),
-                    alignment: Alignment.center,
-                    child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(1000.0),
-                            child: Image.asset(
-                                './assets/images/pict1.jpg',
-                                width: 70,
-                                alignment: Alignment.center),
-                          ),
-                          const Padding(
-                            padding: EdgeInsets.all(4),
-                            child: Text('Shopping'),
-                          )
-                        ]),
-                  ),
-                  Container(
-                    padding: const EdgeInsets.all(6),
-                    alignment: Alignment.center,
-                    child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(1000.0),
-                            child: Image.asset(
-                                './assets/images/pict2.jpg',
-                                width: 70,
-                                alignment: Alignment.center),
-                          ),
-                          const Padding(
-                            padding: EdgeInsets.all(4),
-                            child: Text('StreetStyle'),
-                          )
-                        ]),
-                  ),
-                  Container(
-                    padding: const EdgeInsets.all(6),
-                    alignment: Alignment.center,
-                    child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(1000.0),
-                            child: Image.asset(
-                                './assets/images/pict3.jpg',
-                                width: 70,
-                                alignment: Alignment.center),
-                          ),
-                          const Padding(
-                            padding: EdgeInsets.all(4),
-                            child: Text('Zara'),
-                          )
-                        ]),
-                  ),
-                  Container(
-                    padding: const EdgeInsets.all(6),
-                    alignment: Alignment.center,
-                    child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(1000.0),
-                            child: Image.asset(
-                                './assets/images/pict4.jpg',
-                                width: 70,
-                                alignment: Alignment.center),
-                          ),
-                          const Padding(
-                            padding: EdgeInsets.all(4),
-                            child: Text('Celebreties'),
-                          )
-                        ]),
-                  ),
-                  Container(
-                    padding: const EdgeInsets.all(6),
-                    alignment: Alignment.center,
-                    child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(1000.0),
-                            child: Image.asset(
-                                './assets/images/pict5.jpg',
-                                width: 70,
-                                alignment: Alignment.center),
-                          ),
-                          const Padding(
-                            padding: EdgeInsets.all(4),
-                            child: Text('Belleza'),
-                          )
-                        ]),
-                  ),
-                  Container(
-                    padding: const EdgeInsets.all(6),
-                    alignment: Alignment.center,
-                    child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(1000.0),
-                            child: Image.asset(
-                                './assets/images/pict6.jpg',
-                                width: 70,
-                                alignment: Alignment.center),
-                          ),
-                          const Padding(
-                            padding: EdgeInsets.all(4),
-                            child: Text('Feminismo'),
-                          )
-                        ]),
-                  ),
-                ]),
+                child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: <Widget>[
+                      Container(
+                        padding: const EdgeInsets.all(10),
+                        alignment: Alignment.center,
+                        child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(1000.0),
+                                child: Image.asset('./assets/images/pict1.jpg',
+                                    width: 70, alignment: Alignment.center),
+                              ),
+                              const Padding(
+                                padding: EdgeInsets.all(4),
+                                child: Text('Shopping'),
+                              )
+                            ]),
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(6),
+                        alignment: Alignment.center,
+                        child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(1000.0),
+                                child: Image.asset('./assets/images/pict2.jpg',
+                                    width: 70, alignment: Alignment.center),
+                              ),
+                              const Padding(
+                                padding: EdgeInsets.all(4),
+                                child: Text('StreetStyle'),
+                              )
+                            ]),
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(6),
+                        alignment: Alignment.center,
+                        child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(1000.0),
+                                child: Image.asset('./assets/images/pict3.jpg',
+                                    width: 70, alignment: Alignment.center),
+                              ),
+                              const Padding(
+                                padding: EdgeInsets.all(4),
+                                child: Text('Zara'),
+                              )
+                            ]),
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(6),
+                        alignment: Alignment.center,
+                        child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(1000.0),
+                                child: Image.asset('./assets/images/pict4.jpg',
+                                    width: 70, alignment: Alignment.center),
+                              ),
+                              const Padding(
+                                padding: EdgeInsets.all(4),
+                                child: Text('Celebreties'),
+                              )
+                            ]),
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(6),
+                        alignment: Alignment.center,
+                        child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(1000.0),
+                                child: Image.asset('./assets/images/pict5.jpg',
+                                    width: 70, alignment: Alignment.center),
+                              ),
+                              const Padding(
+                                padding: EdgeInsets.all(4),
+                                child: Text('Belleza'),
+                              )
+                            ]),
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(6),
+                        alignment: Alignment.center,
+                        child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(1000.0),
+                                child: Image.asset('./assets/images/pict6.jpg',
+                                    width: 70, alignment: Alignment.center),
+                              ),
+                              const Padding(
+                                padding: EdgeInsets.all(4),
+                                child: Text('Feminismo'),
+                              )
+                            ]),
+                      ),
+                    ]),
               ),
               Container(
                 width: 392,
