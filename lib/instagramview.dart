@@ -62,18 +62,21 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         title: const Center(
           child: Text(
             'trendencias',
-            style: TextStyle(color: Colors.black, fontFamily: 'Alexandria'),
+            style: TextStyle(
+                color: Colors.black,
+                fontFamily: 'Alexandria',
+                fontWeight: FontWeight.bold),
           ),
         ),
       ),
       body: Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
-        Container(
+        SizedBox(
           height: 1000,
           width: 392,
           child: Column(
             children: [
               Row(children: [
-                Container(
+                SizedBox(
                   width: 392,
                   height: 135,
                   child: Column(
@@ -95,7 +98,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                             Row(
                               children: [
                                 Padding(
-                                  padding: const EdgeInsets.all(5),
+                                  padding: const EdgeInsets.all(4),
                                   child: Column(children: const [
                                     Text("3.530",
                                         style: TextStyle(
@@ -103,12 +106,15 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                                             fontWeight: FontWeight.bold)),
                                     Text(
                                       "publicaciones",
-                                      style: TextStyle(color: Colors.grey),
+                                      style: TextStyle(
+                                          color: Colors.grey,
+                                          fontFamily: 'NotoSansJP',
+                                          fontSize: 14),
                                     )
                                   ]),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.all(5),
+                                  padding: const EdgeInsets.all(4),
                                   child: Column(children: const [
                                     Text("53,4 mil",
                                         style: TextStyle(
@@ -116,12 +122,15 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                                             fontWeight: FontWeight.bold)),
                                     Text(
                                       "seguidores",
-                                      style: TextStyle(color: Colors.grey),
+                                      style: TextStyle(
+                                          color: Colors.grey,
+                                          fontFamily: 'NotoSansJP',
+                                          fontSize: 14),
                                     )
                                   ]),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.all(5),
+                                  padding: const EdgeInsets.all(4),
                                   child: Column(children: const [
                                     Text("192",
                                         style: TextStyle(
@@ -129,7 +138,10 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                                             fontWeight: FontWeight.bold)),
                                     Text(
                                       "seguidos",
-                                      style: TextStyle(color: Colors.grey),
+                                      style: TextStyle(
+                                          color: Colors.grey,
+                                          fontFamily: 'NotoSansJP',
+                                          fontSize: 14),
                                     )
                                   ]),
                                 ),
@@ -139,21 +151,13 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                               MaterialButton(
                                 padding: const EdgeInsets.all(5),
                                 minWidth: 130.0,
-                                highlightColor: Colors.amber,
                                 height: 30.0,
                                 onPressed: () {},
                                 color: Colors.white,
-                                child: const Text('Enviar mensaje', style: TextStyle(fontSize: 15),),
-                              ),
-                              MaterialButton(
-                                padding: const EdgeInsets.fromLTRB(5,0,5,0),
-
-                                minWidth: 0,
-
-                                height: 30,
-                                color: Colors.white,
-                                onPressed: () {},
-                                child: const Icon(Icons.person_add_alt_1, size: 25,),
+                                child: const Text(
+                                  'Enviar mensaje',
+                                  style: TextStyle(fontSize: 15),
+                                ),
                               ),
                               MaterialButton(
                                 padding: const EdgeInsets.fromLTRB(5, 0, 5, 0),
@@ -161,7 +165,21 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                                 height: 30,
                                 color: Colors.white,
                                 onPressed: () {},
-                                child: const Icon(Icons.arrow_drop_down, size: 30,),
+                                child: const Icon(
+                                  Icons.person_add_alt_1,
+                                  size: 25,
+                                ),
+                              ),
+                              MaterialButton(
+                                padding: const EdgeInsets.fromLTRB(5, 0, 5, 0),
+                                minWidth: 0,
+                                height: 30,
+                                color: Colors.white,
+                                onPressed: () {},
+                                child: const Icon(
+                                  Icons.arrow_drop_down,
+                                  size: 30,
+                                ),
                               )
                             ]),
                           ],
@@ -173,7 +191,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               ]),
               SizedBox(
                 width: 392,
-                height: 150,
+                height: 160,
                 child: Column(
                   children: [
                     Column(
@@ -186,7 +204,10 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                           ),
                           Text(
                             "Sitio web de noticias y medios de counicación",
-                            style: TextStyle(fontSize: 16, color: Colors.grey),
+                            style: TextStyle(
+                                fontSize: 15,
+                                color: Colors.grey,
+                                fontFamily: 'NotoSansJP'),
                           ),
                           Text(
                             "Moda. Belleza. Street Style. Compras. Celebrities."
@@ -199,10 +220,126 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   ],
                 ),
               ),
-              Container(
+              SizedBox(
                 width: 392,
                 height: 130,
-                color: Colors.amber,
+                child: ListView(scrollDirection: Axis.horizontal, children: <
+                    Widget>[
+                  Container(
+                    padding: const EdgeInsets.all(10),
+                    alignment: Alignment.center,
+                    child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(1000.0),
+                            child: Image.asset(
+                                './assets/images/pict1.jpg',
+                                width: 70,
+                                alignment: Alignment.center),
+                          ),
+                          const Padding(
+                            padding: EdgeInsets.all(4),
+                            child: Text('Shopping'),
+                          )
+                        ]),
+                  ),
+                  Container(
+                    padding: const EdgeInsets.all(6),
+                    alignment: Alignment.center,
+                    child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(1000.0),
+                            child: Image.asset(
+                                './assets/images/pict2.jpg',
+                                width: 70,
+                                alignment: Alignment.center),
+                          ),
+                          const Padding(
+                            padding: EdgeInsets.all(4),
+                            child: Text('StreetStyle'),
+                          )
+                        ]),
+                  ),
+                  Container(
+                    padding: const EdgeInsets.all(6),
+                    alignment: Alignment.center,
+                    child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(1000.0),
+                            child: Image.asset(
+                                './assets/images/pict3.jpg',
+                                width: 70,
+                                alignment: Alignment.center),
+                          ),
+                          const Padding(
+                            padding: EdgeInsets.all(4),
+                            child: Text('Zara'),
+                          )
+                        ]),
+                  ),
+                  Container(
+                    padding: const EdgeInsets.all(6),
+                    alignment: Alignment.center,
+                    child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(1000.0),
+                            child: Image.asset(
+                                './assets/images/pict4.jpg',
+                                width: 70,
+                                alignment: Alignment.center),
+                          ),
+                          const Padding(
+                            padding: EdgeInsets.all(4),
+                            child: Text('Celebreties'),
+                          )
+                        ]),
+                  ),
+                  Container(
+                    padding: const EdgeInsets.all(6),
+                    alignment: Alignment.center,
+                    child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(1000.0),
+                            child: Image.asset(
+                                './assets/images/pict5.jpg',
+                                width: 70,
+                                alignment: Alignment.center),
+                          ),
+                          const Padding(
+                            padding: EdgeInsets.all(4),
+                            child: Text('Belleza'),
+                          )
+                        ]),
+                  ),
+                  Container(
+                    padding: const EdgeInsets.all(6),
+                    alignment: Alignment.center,
+                    child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(1000.0),
+                            child: Image.asset(
+                                './assets/images/pict6.jpg',
+                                width: 70,
+                                alignment: Alignment.center),
+                          ),
+                          const Padding(
+                            padding: EdgeInsets.all(4),
+                            child: Text('Feminismo'),
+                          )
+                        ]),
+                  ),
+                ]),
               ),
               Container(
                 width: 392,
