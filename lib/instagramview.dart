@@ -1,6 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+
 
 void main() => runApp(const MyApp());
+
+_launchURL() async {
+  Uri url = Uri.http('https://www.fluttercampus.com/guide/42/how-to-open-url-in-external-browser-in-flutter-app/');
+  if (await canLaunchUrl(url)) {
+    await launchUrl(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -21,8 +32,8 @@ class MyStatefulWidget extends StatefulWidget {
   State<MyStatefulWidget> createState() => _MyStatefulWidgetState();
 }
 
-class _MyStatefulWidgetState extends State<MyStatefulWidget> {
 
+class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,10 +50,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         ),
       ),
       body: Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
-        Container(
-          height: 1000,
-          width: 392,
-          color: Colors.white,
+        Expanded(
           child: ListView(scrollDirection: Axis.vertical, children: <Widget>[
             Column(
               children: [
@@ -54,16 +62,31 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                       children: [
                         Row(children: [
                           Container(
-                              width: 140,
-                              height: 135,
-                              alignment: Alignment.center,
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(1000.0),
-                                child: Image.asset(
-                                    './assets/images/trendencias.jpg',
-                                    width: 110,
-                                    alignment: Alignment.center),
-                              )),
+                            width: 140,
+                            height: 135,
+                            alignment: Alignment.center,
+                            child: Container(
+                              width: 110,
+                              height: 110,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                border: Border.all(color: Colors.grey),
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsets.all(4),
+                                // border width
+                                child: Container(
+                                  // or ClipRRect if you need to clip the content
+                                  decoration: const BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    image: DecorationImage(
+                                        image: AssetImage(
+                                            "./assets/images/trendencias.jpg")),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
                           Column(
                             children: [
                               Row(
@@ -163,35 +186,42 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   ),
                 ]),
                 SizedBox(
-                  width: 392,
                   height: 140,
                   child: Column(
                     children: [
                       Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const [
-                            Text(
+                          children: [
+                            const Text(
                               "Trendencias",
                               style: TextStyle(
-                                  fontSize: 19, fontWeight: FontWeight.bold),
+                                  fontSize: 18, fontWeight: FontWeight.bold),
                             ),
-                            Text(
+                            const Text(
                               "Sitio web de noticias y medios de counicación",
                               style: TextStyle(
-                                  fontSize: 15,
+                                  fontSize: 14,
                                   color: Colors.grey,
                                   fontFamily: 'NotoSansJP'),
                             ),
-                            Text(
+                            const Text(
                               "Moda. Belleza. Street Style. Compras. Celebrities."
                               "\nAlfombras Rojas. Feminismo.",
-                              style: TextStyle(fontSize: 17),
+                              style: TextStyle(fontSize: 16),
                             ),
-                            Text(
-                              "iglink.co/Trendencias"
-                              "\nCalle Jenner 3, 3º, Madrid, Spain",
-                              style:
-                                  TextStyle(fontSize: 17, color: Colors.blue),
+                            const Text(
+                              "iglink.co/Trendencias",
+                            style:
+                                  TextStyle(fontSize: 16, color: Colors.blue),
+                            ),
+                            TextButton(
+                                child: const Text("\nCalle Jenner 3, 3º, Madrid, Spain",
+                                  style:
+                                  TextStyle(fontSize: 16, color: Colors.blue),),
+                                onPressed: () {
+                                  _launchURL();
+                                }
                             ),
                           ]),
                     ],
@@ -315,7 +345,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                     child: const Text(
                       'Enviar correo electrónico',
                       style: TextStyle(
-                          fontSize: 15,
+                          fontSize: 14,
                           color: Colors.blue,
                           fontWeight: FontWeight.bold,
                           fontFamily: 'NotoSansJP'),
@@ -329,7 +359,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                     child: const Text(
                       'Cómo llegar',
                       style: TextStyle(
-                          fontSize: 15,
+                          fontSize: 14,
                           color: Colors.blue,
                           fontWeight: FontWeight.bold,
                           fontFamily: 'NotoSansJP'),
@@ -411,7 +441,6 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   './assets/images/shopping1.jpg',
                   width: 131,
                   height: 130,
-
                 ),
                 Image.asset(
                   './assets/images/shopping8.jpg',
@@ -442,7 +471,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             label: '',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.account_circle_outlined, color: Colors.black, size: 40),
+            icon: Icon(Icons.account_circle_outlined,
+                color: Colors.black, size: 40),
             label: '',
           ),
         ],
