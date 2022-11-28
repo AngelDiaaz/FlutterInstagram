@@ -1,17 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
-
+import 'package:url_launcher/url_launcher_string.dart';
 
 void main() => runApp(const MyApp());
-
-_launchURL() async {
-  Uri url = Uri.http('https://www.fluttercampus.com/guide/42/how-to-open-url-in-external-browser-in-flutter-app/');
-  if (await canLaunchUrl(url)) {
-    await launchUrl(url);
-  } else {
-    throw 'Could not launch $url';
-  }
-}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -31,7 +21,6 @@ class MyStatefulWidget extends StatefulWidget {
   @override
   State<MyStatefulWidget> createState() => _MyStatefulWidgetState();
 }
-
 
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   @override
@@ -192,36 +181,29 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                       Column(
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            const Text(
+                          children: const [
+                            Text(
                               "Trendencias",
                               style: TextStyle(
                                   fontSize: 18, fontWeight: FontWeight.bold),
                             ),
-                            const Text(
+                            Text(
                               "Sitio web de noticias y medios de counicación",
                               style: TextStyle(
                                   fontSize: 14,
                                   color: Colors.grey,
                                   fontFamily: 'NotoSansJP'),
                             ),
-                            const Text(
+                            Text(
                               "Moda. Belleza. Street Style. Compras. Celebrities."
                               "\nAlfombras Rojas. Feminismo.",
                               style: TextStyle(fontSize: 16),
                             ),
-                            const Text(
-                              "iglink.co/Trendencias",
-                            style:
+                            Text(
+                              "iglink.co/Trendencias"
+                              "\nCalle Jenner 3, 3º, Madrid, Spain",
+                              style:
                                   TextStyle(fontSize: 16, color: Colors.blue),
-                            ),
-                            TextButton(
-                                child: const Text("\nCalle Jenner 3, 3º, Madrid, Spain",
-                                  style:
-                                  TextStyle(fontSize: 16, color: Colors.blue),),
-                                onPressed: () {
-                                  _launchURL();
-                                }
                             ),
                           ]),
                     ],
@@ -230,111 +212,208 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 SizedBox(
                   width: 392,
                   height: 130,
-                  child: ListView(scrollDirection: Axis.horizontal, children: <
-                      Widget>[
-                    Container(
-                      padding: const EdgeInsets.all(10),
-                      alignment: Alignment.center,
-                      child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(1000.0),
-                              child: Image.asset('./assets/images/pict1.jpg',
-                                  width: 70, alignment: Alignment.center),
-                            ),
-                            const Padding(
-                              padding: EdgeInsets.all(4),
-                              child: Text('Shopping'),
-                            )
-                          ]),
-                    ),
-                    Container(
-                      padding: const EdgeInsets.all(6),
-                      alignment: Alignment.center,
-                      child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(1000.0),
-                              child: Image.asset('./assets/images/pict2.jpg',
-                                  width: 70, alignment: Alignment.center),
-                            ),
-                            const Padding(
-                              padding: EdgeInsets.all(4),
-                              child: Text('StreetStyle'),
-                            )
-                          ]),
-                    ),
-                    Container(
-                      padding: const EdgeInsets.all(6),
-                      alignment: Alignment.center,
-                      child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(1000.0),
-                              child: Image.asset('./assets/images/pict3.jpg',
-                                  width: 70, alignment: Alignment.center),
-                            ),
-                            const Padding(
-                              padding: EdgeInsets.all(4),
-                              child: Text('Zara'),
-                            )
-                          ]),
-                    ),
-                    Container(
-                      padding: const EdgeInsets.all(6),
-                      alignment: Alignment.center,
-                      child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(1000.0),
-                              child: Image.asset('./assets/images/pict4.jpg',
-                                  width: 70, alignment: Alignment.center),
-                            ),
-                            const Padding(
-                              padding: EdgeInsets.all(4),
-                              child: Text('Celebreties'),
-                            )
-                          ]),
-                    ),
-                    Container(
-                      padding: const EdgeInsets.all(6),
-                      alignment: Alignment.center,
-                      child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(1000.0),
-                              child: Image.asset('./assets/images/pict5.jpg',
-                                  width: 70, alignment: Alignment.center),
-                            ),
-                            const Padding(
-                              padding: EdgeInsets.all(4),
-                              child: Text('Belleza'),
-                            )
-                          ]),
-                    ),
-                    Container(
-                      padding: const EdgeInsets.all(6),
-                      alignment: Alignment.center,
-                      child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(1000.0),
-                              child: Image.asset('./assets/images/pict6.jpg',
-                                  width: 70, alignment: Alignment.center),
-                            ),
-                            const Padding(
-                              padding: EdgeInsets.all(4),
-                              child: Text('Feminismo'),
-                            )
-                          ]),
-                    ),
-                  ]),
+                  child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      children: <Widget>[
+                        Container(
+                          padding: const EdgeInsets.all(10),
+                          alignment: Alignment.center,
+                          child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Container(
+                                  width: 75,
+                                  height: 75,
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    border: Border.all(color: Colors.grey),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(4),
+                                    // border width
+                                    child: Container(
+                                      // or ClipRRect if you need to clip the content
+                                      decoration: const BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        image: DecorationImage(
+                                            image: AssetImage(
+                                                "./assets/images/pict1.jpg")),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                const Padding(
+                                  padding: EdgeInsets.all(4),
+                                  child: Text('Shopping'),
+                                )
+                              ]),
+                        ),
+                        Container(
+                          padding: const EdgeInsets.all(6),
+                          alignment: Alignment.center,
+                          child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Container(
+                                  width: 75,
+                                  height: 75,
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    border: Border.all(color: Colors.grey),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(4),
+                                    // border width
+                                    child: Container(
+                                      // or ClipRRect if you need to clip the content
+                                      decoration: const BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        image: DecorationImage(
+                                            image: AssetImage(
+                                                "./assets/images/pict2.jpg")),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                const Padding(
+                                  padding: EdgeInsets.all(4),
+                                  child: Text('StreetStyle'),
+                                )
+                              ]),
+                        ),
+                        Container(
+                          padding: const EdgeInsets.all(6),
+                          alignment: Alignment.center,
+                          child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Container(
+                                  width: 75,
+                                  height: 75,
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    border: Border.all(color: Colors.grey),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(4),
+                                    // border width
+                                    child: Container(
+                                      // or ClipRRect if you need to clip the content
+                                      decoration: const BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        image: DecorationImage(
+                                            image: AssetImage(
+                                                "./assets/images/pict3.jpg")),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                const Padding(
+                                  padding: EdgeInsets.all(4),
+                                  child: Text('Zara'),
+                                )
+                              ]),
+                        ),
+                        Container(
+                          padding: const EdgeInsets.all(6),
+                          alignment: Alignment.center,
+                          child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Container(
+                                  width: 75,
+                                  height: 75,
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    border: Border.all(color: Colors.grey),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(4),
+                                    // border width
+                                    child: Container(
+                                      // or ClipRRect if you need to clip the content
+                                      decoration: const BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        image: DecorationImage(
+                                            image: AssetImage(
+                                                "./assets/images/pict4.jpg")),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                const Padding(
+                                  padding: EdgeInsets.all(4),
+                                  child: Text('Celebreties'),
+                                )
+                              ]),
+                        ),
+                        Container(
+                          padding: const EdgeInsets.all(6),
+                          alignment: Alignment.center,
+                          child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Container(
+                                  width: 75,
+                                  height: 75,
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    border: Border.all(color: Colors.grey),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(4),
+                                    // border width
+                                    child: Container(
+                                      // or ClipRRect if you need to clip the content
+                                      decoration: const BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        image: DecorationImage(
+                                            image: AssetImage(
+                                                "./assets/images/pict5.jpg")),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                const Padding(
+                                  padding: EdgeInsets.all(4),
+                                  child: Text('Belleza'),
+                                )
+                              ]),
+                        ),
+                        Container(
+                          padding: const EdgeInsets.all(6),
+                          alignment: Alignment.center,
+                          child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Container(
+                                  width: 75,
+                                  height: 75,
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    border: Border.all(color: Colors.grey),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(4),
+                                    // border width
+                                    child: Container(
+                                      // or ClipRRect if you need to clip the content
+                                      decoration: const BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        image: DecorationImage(
+                                            image: AssetImage(
+                                                "./assets/images/pict6.jpg")),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                const Padding(
+                                  padding: EdgeInsets.all(4),
+                                  child: Text('Feminismo'),
+                                )
+                              ]),
+                        ),
+                      ]),
                 ),
                 Row(children: [
                   MaterialButton(
@@ -355,7 +434,10 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                     padding: const EdgeInsets.all(5),
                     height: 50,
                     minWidth: 196,
-                    onPressed: () {},
+                    onPressed: () {
+                      launchUrlString(
+                          'https://www.google.com/search?client=opera&q=Calle+Jenner+3%2C+3º%2C+Madrid%2C+Spain&sourceid=opera&ie=UTF-8&oe=UTF-8');
+                    },
                     child: const Text(
                       'Cómo llegar',
                       style: TextStyle(
