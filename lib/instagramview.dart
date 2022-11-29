@@ -59,7 +59,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                               height: 110,
                               decoration: BoxDecoration(
                                 shape: BoxShape.circle,
-                                border: Border.all(color: Colors.grey),
+                                border: Border.all(color: const Color.fromRGBO(199, 199, 199, 100)),
                               ),
                               child: Padding(
                                 padding: const EdgeInsets.all(4),
@@ -188,7 +188,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                                   fontSize: 18, fontWeight: FontWeight.bold),
                             ),
                             Text(
-                              "Sitio web de noticias y medios de counicación",
+                              "Sitio web de noticias y medios de comunicación",
                               style: TextStyle(
                                   fontSize: 14,
                                   color: Colors.grey,
@@ -226,7 +226,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                                   height: 75,
                                   decoration: BoxDecoration(
                                     shape: BoxShape.circle,
-                                    border: Border.all(color: Colors.grey),
+                                    border: Border.all(color: const Color.fromRGBO(199, 199, 199, 100)),
                                   ),
                                   child: Padding(
                                     padding: const EdgeInsets.all(4),
@@ -259,7 +259,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                                   height: 75,
                                   decoration: BoxDecoration(
                                     shape: BoxShape.circle,
-                                    border: Border.all(color: Colors.grey),
+                                    border: Border.all(color: const Color.fromRGBO(199, 199, 199, 100)),
                                   ),
                                   child: Padding(
                                     padding: const EdgeInsets.all(4),
@@ -292,7 +292,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                                   height: 75,
                                   decoration: BoxDecoration(
                                     shape: BoxShape.circle,
-                                    border: Border.all(color: Colors.grey),
+                                    border: Border.all(color: const Color.fromRGBO(199, 199, 199, 100)),
                                   ),
                                   child: Padding(
                                     padding: const EdgeInsets.all(4),
@@ -325,7 +325,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                                   height: 75,
                                   decoration: BoxDecoration(
                                     shape: BoxShape.circle,
-                                    border: Border.all(color: Colors.grey),
+                                    border: Border.all(color: const Color.fromRGBO(199, 199, 199, 100)),
                                   ),
                                   child: Padding(
                                     padding: const EdgeInsets.all(4),
@@ -358,7 +358,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                                   height: 75,
                                   decoration: BoxDecoration(
                                     shape: BoxShape.circle,
-                                    border: Border.all(color: Colors.grey),
+                                    border: Border.all(color: const Color.fromRGBO(199, 199, 199, 100)),
                                   ),
                                   child: Padding(
                                     padding: const EdgeInsets.all(4),
@@ -391,7 +391,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                                   height: 75,
                                   decoration: BoxDecoration(
                                     shape: BoxShape.circle,
-                                    border: Border.all(color: Colors.grey),
+                                    border: Border.all(color: const Color.fromRGBO(199, 199, 199, 100)),
                                   ),
                                   child: Padding(
                                     padding: const EdgeInsets.all(4),
@@ -461,7 +461,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                     Container(
                       padding: const EdgeInsets.fromLTRB(75, 0, 75, 10),
                       child: IconButton(
-                        icon: const Icon(Icons.add_box_sharp,
+                        icon: const Icon(Icons.amp_stories_outlined,
                             color: Colors.grey, size: 38),
                         onPressed: () {},
                       ),
@@ -481,53 +481,77 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             ),
             Row(
               children: [
-                Image.asset(
-                  './assets/images/shopping4.jpg',
-                  width: 131,
-                  height: 130,
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 1),
+                  child: Image.asset(
+                    './assets/images/shopping4.jpg',
+                    width: 129,
+                    height: 130,
+                  ),
                 ),
-                Image.asset(
-                  './assets/images/shopping5.jpg',
-                  width: 130,
-                  height: 130,
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(2, 0, 2, 1),
+                  child: Image.asset(
+                    './assets/images/shopping5.jpg',
+                    width: 129,
+                    height: 130,
+                  ),
                 ),
-                Image.asset(
-                  './assets/images/shopping7.jpg',
-                  width: 131,
-                  height: 130,
-                ),
-              ],
-            ),
-            Row(
-              children: [
-                Image.asset(
-                  './assets/images/shopping2.jpg',
-                  width: 131,
-                  height: 130,
-                ),
-                Image.asset(
-                  './assets/images/shopping3.jpg',
-                  width: 130,
-                  height: 130,
-                ),
-                Image.asset(
-                  './assets/images/shopping6.jpg',
-                  width: 131,
-                  height: 130,
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 1),
+                  child: Image.asset(
+                    './assets/images/shopping7.jpg',
+                    width: 129,
+                    height: 130,
+                  ),
                 ),
               ],
             ),
             Row(
               children: [
-                Image.asset(
-                  './assets/images/shopping1.jpg',
-                  width: 131,
-                  height: 130,
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 1),
+                  child: Image.asset(
+                    './assets/images/shopping2.jpg',
+                    width: 129,
+                    height: 130,
+                  ),
                 ),
-                Image.asset(
-                  './assets/images/shopping8.jpg',
-                  width: 130,
-                  height: 130,
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(2, 0, 2, 1),
+                  child: Image.asset(
+                    './assets/images/shopping3.jpg',
+                    width: 129,
+                    height: 130,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 1),
+                  child: Image.asset(
+                    './assets/images/shopping6.jpg',
+                    width: 129,
+                    height: 130,
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 1),
+                  child: Image.asset(
+                    './assets/images/shopping1.jpg',
+                    width: 129,
+                    height: 130,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(2, 0, 2, 1),
+                  child: Image.asset(
+                    './assets/images/shopping8.jpg',
+                    width: 129,
+                    height: 130,
+                  ),
                 ),
               ],
             ),
@@ -537,7 +561,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home_filled, color: Colors.black, size: 40),
+            icon: Icon(Icons.home_outlined, color: Colors.black, size: 40),
             label: '',
           ),
           BottomNavigationBarItem(
@@ -549,16 +573,14 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             label: '',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.heart_broken, color: Colors.black, size: 40),
+            icon: Icon(Icons.favorite_border, color: Colors.black, size: 40),
             label: '',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.account_circle_outlined,
-                color: Colors.black, size: 40),
+            icon: Icon(Icons.account_circle_outlined, color: Colors.black, size: 40),
             label: '',
           ),
         ],
-        // selectedItemColor: Colors.black87,
       ),
     );
   }
