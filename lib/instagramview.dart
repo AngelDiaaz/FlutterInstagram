@@ -559,26 +559,30 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         )
       ]),
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+        iconSize: 40,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home_outlined, color: Colors.black, size: 40),
-            label: '',
+            icon: Icon(Icons.home_outlined, color: Colors.black),
+            label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.search_sharp, color: Colors.black, size: 40),
-            label: '',
+            icon: Icon(Icons.search_sharp, color: Colors.black),
+            label: 'Search',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.add_box_outlined, color: Colors.black, size: 40),
-            label: '',
+            icon: Icon(Icons.add_box_outlined, color: Colors.black),
+            label: 'Reels',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.favorite_border, color: Colors.black, size: 40),
-            label: '',
+            icon: Icon(Icons.favorite_border, color: Colors.black),
+            label: 'Favorite',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.account_circle_outlined, color: Colors.black, size: 40),
-            label: '',
+            icon: Icon(Icons.account_circle_outlined, color: Colors.black),
+            label: 'Profil',
           ),
         ],
       ),
