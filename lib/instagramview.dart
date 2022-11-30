@@ -559,6 +559,9 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         )
       ]),
       bottomNavigationBar: BottomNavigationBar(
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+        type: BottomNavigationBarType.fixed,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home_outlined, color: Colors.black, size: 40),
