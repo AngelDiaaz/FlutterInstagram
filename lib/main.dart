@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'instagramview.dart';
+import 'utils/instagramview.dart';
 
 void main() {
   runApp(const MyApp());

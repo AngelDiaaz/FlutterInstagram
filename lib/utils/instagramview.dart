@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher_string.dart';
+import 'drawermenu.dart';
 
 void main() => runApp(const MyApp());
 
@@ -26,6 +27,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      endDrawer: const DrawerMenu(),
       appBar: AppBar(
         backgroundColor: const Color.fromRGBO(251, 252, 252, 50),
         title: const Center(
@@ -37,6 +39,31 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 fontWeight: FontWeight.bold),
           ),
         ),
+        leading:
+        GestureDetector(
+          onTap: () {},
+          child: const Icon(
+            Icons.arrow_back_ios_outlined,
+            color: Colors.black, // add custom icons also
+          ),
+        ),
+        actions: <Widget>[
+          Builder(
+            builder: (context) => Padding(
+                padding: const EdgeInsets.only(right: 10.0),
+                child: GestureDetector(
+                  onTap: () {},
+                  child: IconButton(
+                    color: Colors.black,
+                    icon: const Icon(
+                      Icons.more_horiz,
+                    ),
+                    onPressed: () => Scaffold.of(context).openEndDrawer(),
+
+                  ),
+                )),
+          ),
+        ],
       ),
       body: Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
         Expanded(
@@ -59,7 +86,9 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                               height: 110,
                               decoration: BoxDecoration(
                                 shape: BoxShape.circle,
-                                border: Border.all(color: const Color.fromRGBO(199, 199, 199, 100)),
+                                border: Border.all(
+                                    color: const Color.fromRGBO(
+                                        199, 199, 199, 100)),
                               ),
                               child: Padding(
                                 padding: const EdgeInsets.all(4),
@@ -226,7 +255,9 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                                   height: 75,
                                   decoration: BoxDecoration(
                                     shape: BoxShape.circle,
-                                    border: Border.all(color: const Color.fromRGBO(199, 199, 199, 100)),
+                                    border: Border.all(
+                                        color: const Color.fromRGBO(
+                                            199, 199, 199, 100)),
                                   ),
                                   child: Padding(
                                     padding: const EdgeInsets.all(4),
@@ -259,7 +290,9 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                                   height: 75,
                                   decoration: BoxDecoration(
                                     shape: BoxShape.circle,
-                                    border: Border.all(color: const Color.fromRGBO(199, 199, 199, 100)),
+                                    border: Border.all(
+                                        color: const Color.fromRGBO(
+                                            199, 199, 199, 100)),
                                   ),
                                   child: Padding(
                                     padding: const EdgeInsets.all(4),
@@ -292,7 +325,9 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                                   height: 75,
                                   decoration: BoxDecoration(
                                     shape: BoxShape.circle,
-                                    border: Border.all(color: const Color.fromRGBO(199, 199, 199, 100)),
+                                    border: Border.all(
+                                        color: const Color.fromRGBO(
+                                            199, 199, 199, 100)),
                                   ),
                                   child: Padding(
                                     padding: const EdgeInsets.all(4),
@@ -325,7 +360,9 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                                   height: 75,
                                   decoration: BoxDecoration(
                                     shape: BoxShape.circle,
-                                    border: Border.all(color: const Color.fromRGBO(199, 199, 199, 100)),
+                                    border: Border.all(
+                                        color: const Color.fromRGBO(
+                                            199, 199, 199, 100)),
                                   ),
                                   child: Padding(
                                     padding: const EdgeInsets.all(4),
@@ -358,7 +395,9 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                                   height: 75,
                                   decoration: BoxDecoration(
                                     shape: BoxShape.circle,
-                                    border: Border.all(color: const Color.fromRGBO(199, 199, 199, 100)),
+                                    border: Border.all(
+                                        color: const Color.fromRGBO(
+                                            199, 199, 199, 100)),
                                   ),
                                   child: Padding(
                                     padding: const EdgeInsets.all(4),
@@ -391,7 +430,9 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                                   height: 75,
                                   decoration: BoxDecoration(
                                     shape: BoxShape.circle,
-                                    border: Border.all(color: const Color.fromRGBO(199, 199, 199, 100)),
+                                    border: Border.all(
+                                        color: const Color.fromRGBO(
+                                            199, 199, 199, 100)),
                                   ),
                                   child: Padding(
                                     padding: const EdgeInsets.all(4),
@@ -559,30 +600,30 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         )
       ]),
       bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
         showSelectedLabels: false,
         showUnselectedLabels: false,
-        iconSize: 40,
+        type: BottomNavigationBarType.fixed,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home_outlined, color: Colors.black),
-            label: 'Home',
+            icon: Icon(Icons.home_outlined, color: Colors.black, size: 40),
+            label: '',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.search_sharp, color: Colors.black),
-            label: 'Search',
+            icon: Icon(Icons.search_sharp, color: Colors.black, size: 40),
+            label: '',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.add_box_outlined, color: Colors.black),
-            label: 'Reels',
+            icon: Icon(Icons.add_box_outlined, color: Colors.black, size: 40),
+            label: '',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.favorite_border, color: Colors.black),
-            label: 'Favorite',
+            icon: Icon(Icons.favorite_border, color: Colors.black, size: 40),
+            label: '',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.account_circle_outlined, color: Colors.black),
-            label: 'Profil',
+            icon: Icon(Icons.account_circle_outlined,
+                color: Colors.black, size: 40),
+            label: '',
           ),
         ],
       ),
