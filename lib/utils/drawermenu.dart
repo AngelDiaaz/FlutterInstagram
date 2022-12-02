@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'inicioview.dart';
+import 'instagramview.dart';
 
 class DrawerMenu extends StatelessWidget {
   const DrawerMenu({super.key});
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -20,11 +19,17 @@ class DrawerMenu extends StatelessWidget {
           ),
           Ink(
             color: Colors.purple,
-            child: const ListTile(
-              title: Text(
+            child: ListTile(
+              title: const Text(
                 "Inicio",
                 style: TextStyle(color: Colors.white),
               ),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SecondRoute()),);
+              },
             ),
           ),
           ListTile(
@@ -33,7 +38,7 @@ class DrawerMenu extends StatelessWidget {
               Navigator.pop(context);
               Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => SecondRoute()),);
+                  MaterialPageRoute(builder: (context) => const MyStatefulWidget()),);
             },
           ),
           ListTile(

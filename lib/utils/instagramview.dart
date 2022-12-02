@@ -1,13 +1,50 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher_string.dart';
+import 'drawermenu.dart';
 
 class MyStatefulWidget extends StatelessWidget {
   const MyStatefulWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return
-       Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
+    return Scaffold(
+        endDrawer: const DrawerMenu(),
+        appBar: AppBar(backgroundColor: const Color.fromRGBO(251, 252, 252, 50),
+          title: const Center(
+            child: Text(
+              'trendencias',
+              style: TextStyle(
+                  color: Colors.black,
+                  fontFamily: 'Alexandria',
+                  fontWeight: FontWeight.bold),
+            ),
+          ),
+          leading: GestureDetector(
+            onTap: () {},
+            child: const Icon(
+              Icons.arrow_back_ios_outlined,
+              color: Colors.black, // add custom icons also
+            ),
+          ),
+          actions: <Widget>[
+            Builder(
+              builder: (context) =>
+                  Padding(
+                      padding: const EdgeInsets.only(right: 10.0),
+                      child: GestureDetector(
+                        onTap: () {},
+                        child: IconButton(
+                          color: Colors.black,
+                          icon: const Icon(
+                            Icons.more_horiz,
+                          ),
+                          onPressed: () => Scaffold.of(context).openEndDrawer(),
+                        ),
+                      )),
+            ),
+          ],
+        ),
+      body: Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
         Expanded(
           child: ListView(scrollDirection: Axis.vertical, children: <Widget>[
             Column(
@@ -540,6 +577,7 @@ class MyStatefulWidget extends StatelessWidget {
             ),
           ]),
         )
-      ]);
+      ])
+    );
   }
 }
