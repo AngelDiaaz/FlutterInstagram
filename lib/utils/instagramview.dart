@@ -1,71 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher_string.dart';
-import 'drawermenu.dart';
 
-void main() => runApp(const MyApp());
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: MyStatefulWidget(),
-    );
-  }
-}
-
-class MyStatefulWidget extends StatefulWidget {
+class MyStatefulWidget extends StatelessWidget {
   const MyStatefulWidget({super.key});
 
   @override
-  State<MyStatefulWidget> createState() => _MyStatefulWidgetState();
-}
-
-class _MyStatefulWidgetState extends State<MyStatefulWidget> {
-  @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      endDrawer: const DrawerMenu(),
-      appBar: AppBar(
-        backgroundColor: const Color.fromRGBO(251, 252, 252, 50),
-        title: const Center(
-          child: Text(
-            'trendencias',
-            style: TextStyle(
-                color: Colors.black,
-                fontFamily: 'Alexandria',
-                fontWeight: FontWeight.bold),
-          ),
-        ),
-        leading:
-        GestureDetector(
-          onTap: () {},
-          child: const Icon(
-            Icons.arrow_back_ios_outlined,
-            color: Colors.black, // add custom icons also
-          ),
-        ),
-        actions: <Widget>[
-          Builder(
-            builder: (context) => Padding(
-                padding: const EdgeInsets.only(right: 10.0),
-                child: GestureDetector(
-                  onTap: () {},
-                  child: IconButton(
-                    color: Colors.black,
-                    icon: const Icon(
-                      Icons.more_horiz,
-                    ),
-                    onPressed: () => Scaffold.of(context).openEndDrawer(),
-
-                  ),
-                )),
-          ),
-        ],
-      ),
-      body: Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
+    return
+       Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
         Expanded(
           child: ListView(scrollDirection: Axis.vertical, children: <Widget>[
             Column(
@@ -598,35 +540,6 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             ),
           ]),
         )
-      ]),
-      bottomNavigationBar: BottomNavigationBar(
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
-        type: BottomNavigationBarType.fixed,
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home_outlined, color: Colors.black, size: 40),
-            label: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.search_sharp, color: Colors.black, size: 40),
-            label: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.add_box_outlined, color: Colors.black, size: 40),
-            label: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.favorite_border, color: Colors.black, size: 40),
-            label: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.account_circle_outlined,
-                color: Colors.black, size: 40),
-            label: '',
-          ),
-        ],
-      ),
-    );
+      ]);
   }
 }
