@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:instagramview/utils/drawermenu.dart';
 
+/// Clase Fin, donde muestra los creditos y como salir de la app
 class Fin extends StatelessWidget {
   const Fin({super.key});
 
@@ -50,7 +51,7 @@ class Fin extends StatelessWidget {
               children: [
                 const Center(
                   child: Text(
-                    'Trabajó realizado por Ángel Díaz Avilés',
+                    'Trabajo realizado por Ángel Díaz Avilés.',
                     style: TextStyle(
                         fontSize: 18,
                         fontFamily: 'Kalam',
@@ -60,7 +61,7 @@ class Fin extends StatelessWidget {
                 const Padding(
                   padding: EdgeInsets.all(20),
                   child: Text(
-                    'Pulsa el botón de abajo para salir',
+                    'Pulsa el botón de abajo para salir.',
                     style: TextStyle(
                         fontSize: 18,
                         fontFamily: 'Kalam',
@@ -69,6 +70,9 @@ class Fin extends StatelessWidget {
                 ),
                 Padding(
                   padding: const EdgeInsets.all(30),
+                  /**
+                   * Boton de salida de la app
+                   */
                   child: MaterialButton(
                     padding: const EdgeInsets.all(30),
                     height: 50,

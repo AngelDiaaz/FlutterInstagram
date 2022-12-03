@@ -4,12 +4,16 @@ import '../utils/drawermenu.dart';
 import '../utils/navegationbar.dart';
 import 'creditsview.dart';
 
+/// Clase MyInstragram, contiene todos los elementos del layout de instragram
 class MyInstragram extends StatelessWidget {
   const MyInstragram({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        /**
+       * Llamo al drawer
+       */
         endDrawer: const DrawerMenu(),
         appBar: AppBar(
           backgroundColor: const Color.fromRGBO(251, 252, 252, 50),
@@ -22,12 +26,16 @@ class MyInstragram extends StatelessWidget {
                   fontWeight: FontWeight.bold),
             ),
           ),
+          /**
+           * Boton que al pulsarlo te dirige a los creditos
+           */
           leading: GestureDetector(
             onTap: () {
               Navigator.pop(context);
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const Fin()),);
+                MaterialPageRoute(builder: (context) => const Fin()),
+              );
             },
             child: const Icon(
               Icons.arrow_back_ios_outlined,
@@ -51,6 +59,9 @@ class MyInstragram extends StatelessWidget {
             ),
           ],
         ),
+        /**
+         * Llamo al navigatonBar para que se muestre en la app
+         */
         bottomNavigationBar: const NavegationBar(),
         body:
             Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
@@ -72,6 +83,9 @@ class MyInstragram extends StatelessWidget {
                               child: Container(
                                 width: 110,
                                 height: 110,
+                                /**
+                                 * Para que se muestre el circulo gris simulando a la historia de instragram
+                                 */
                                 decoration: BoxDecoration(
                                   shape: BoxShape.circle,
                                   border: Border.all(
@@ -80,9 +94,10 @@ class MyInstragram extends StatelessWidget {
                                 ),
                                 child: Padding(
                                   padding: const EdgeInsets.all(4),
-                                  // border width
                                   child: Container(
-                                    // or ClipRRect if you need to clip the content
+                                    /**
+                                     * Para que se vea la imagen en un circulo
+                                     */
                                     decoration: const BoxDecoration(
                                       shape: BoxShape.circle,
                                       image: DecorationImage(
@@ -191,6 +206,9 @@ class MyInstragram extends StatelessWidget {
                       ),
                     ),
                   ]),
+                  /**
+                   * Widget con el texto de la view
+                   */
                   SizedBox(
                     height: 140,
                     child: Column(
@@ -229,6 +247,9 @@ class MyInstragram extends StatelessWidget {
                   SizedBox(
                     width: 392,
                     height: 130,
+                    /**
+                     * Lista de historias infinitas
+                     */
                     child: ListView(
                         scrollDirection: Axis.horizontal,
                         children: <Widget>[

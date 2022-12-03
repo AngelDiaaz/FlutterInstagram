@@ -3,6 +3,7 @@ import '../views/creditsview.dart';
 import '../views/inicioview.dart';
 import '../views/instagramview.dart';
 
+/// Clase DrawerMenu, se encuentra el drawer de la aplicacion
 class DrawerMenu extends StatelessWidget {
   const DrawerMenu({super.key});
 
@@ -21,7 +22,10 @@ class DrawerMenu extends StatelessWidget {
               title: const Text(
                 "Inicio",
               ),
-              onTap: () {
+            /**
+             * Al pulsar se abre la pestaña de inicio
+             */
+            onTap: () {
                 Navigator.pop(context);
                 Navigator.push(
                   context,
@@ -30,6 +34,9 @@ class DrawerMenu extends StatelessWidget {
             ),
           ListTile(
             title: const Text("Instagram"),
+            /**
+             * Al pulsar se abre la pestaña del layout de instragram
+             */
             onTap: () {
               Navigator.pop(context);
               Navigator.push(
@@ -39,6 +46,10 @@ class DrawerMenu extends StatelessWidget {
           ),
           ListTile(
             title: const Text("Créditos"),
+            /**
+             * Al pulsar se abre la pestaña de los creditos
+             */
+            /// Al pulsar se abre la pestaña de los creditos
             onTap: () {
               Navigator.pop(context);
               Navigator.push(

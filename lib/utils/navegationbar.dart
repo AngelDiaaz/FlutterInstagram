@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-
+/// Clase NavegationBar, contiene el navegationBar que usa la app
 class NavegationBar extends StatelessWidget {
   const NavegationBar({super.key});
 
@@ -10,6 +10,9 @@ class NavegationBar extends StatelessWidget {
       showSelectedLabels: false,
       showUnselectedLabels: false,
       type: BottomNavigationBarType.fixed,
+      /**
+       * Incluyo los cinco componentes que quiero que tenga el navegationBar
+       */
       items: const <BottomNavigationBarItem>[
         BottomNavigationBarItem(
           icon: Icon(Icons.home_outlined, color: Colors.black, size: 40),

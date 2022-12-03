@@ -3,12 +3,16 @@ import 'package:instagramview/utils/drawermenu.dart';
 
 import 'instagramview.dart';
 
+/// Clase Inicio, muestra el inicio de la app
 class Inicio extends StatelessWidget {
   const Inicio({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        /**
+       * Muestro el drawer de la app en la parte superior derecha
+       */
         endDrawer: const DrawerMenu(),
         appBar: AppBar(
           backgroundColor: const Color.fromRGBO(193, 53, 132, 70),
@@ -23,7 +27,7 @@ class Inicio extends StatelessWidget {
           ),
 
           /**
-           * Incluyo este widget para que me aparezca el titulo centrado en la app
+           * Incluyo este widget para que aparezca el titulo centrado en la app
            */
           leading: GestureDetector(),
           actions: <Widget>[
@@ -49,11 +53,15 @@ class Inicio extends StatelessWidget {
             child: Column(
               children: [
                 const Center(
-                  child:
-                      Text('Hola Francis, bienvenido al layout de Instragram.'
-                          '\n  Pulsa el botón de abajo o navega a través del'
-                          '\n      drawer en la esquina superior derecha.',
-                          style: TextStyle(fontSize: 18, fontFamily: 'Kalam', fontStyle: FontStyle.italic),),
+                  child: Text(
+                    'Hola Francis, bienvenido al layout de Instragram.'
+                    '\n  Pulsa el botón de abajo o navega a través del'
+                    '\n      drawer en la esquina superior derecha.',
+                    style: TextStyle(
+                        fontSize: 18,
+                        fontFamily: 'Kalam',
+                        fontStyle: FontStyle.italic),
+                  ),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(50),
@@ -62,11 +70,16 @@ class Inicio extends StatelessWidget {
                     height: 50,
                     minWidth: 196,
                     color: const Color.fromRGBO(193, 53, 132, 70),
+                    /**
+                     * Dirige al layout de instragram al pulsar el boton
+                     */
                     onPressed: () {
                       Navigator.pop(context);
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => const MyInstragram()),);
+                        MaterialPageRoute(
+                            builder: (context) => const MyInstragram()),
+                      );
                     },
                     child: const Text(
                       'Layout Instragram',
