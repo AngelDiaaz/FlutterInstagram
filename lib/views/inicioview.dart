@@ -15,7 +15,7 @@ class Inicio extends StatelessWidget {
        */
         endDrawer: const DrawerMenu(),
         appBar: AppBar(
-          backgroundColor: const Color.fromRGBO(193, 53, 132, 70),
+          backgroundColor: const Color.fromRGBO(193, 53, 132, 0.6),
           title: const Center(
             child: Text(
               'Inicio Instagram',
@@ -69,7 +69,7 @@ class Inicio extends StatelessWidget {
                     padding: const EdgeInsets.all(30),
                     height: 50,
                     minWidth: 196,
-                    color: const Color.fromRGBO(193, 53, 132, 70),
+                    color: const Color.fromRGBO(193, 53, 132, 0.6),
                     /**
                      * Dirige al layout de instragram al pulsar el boton
                      */
