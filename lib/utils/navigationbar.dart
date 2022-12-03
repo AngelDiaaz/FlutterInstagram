@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 /// Clase NavegationBar, contiene el navegationBar que usa la app
-class NavegationBar extends StatelessWidget {
-  const NavegationBar({super.key});
+class Navigation extends StatelessWidget {
+  const Navigation({super.key});
 
   @override
   Widget build(BuildContext context) {

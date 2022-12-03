@@ -78,7 +78,7 @@ class Inicio extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const MyInstragram()),
+                            builder: (context) => const MyInstagram.MyInstagram()),
                       );
                     },
                     child: const Text(

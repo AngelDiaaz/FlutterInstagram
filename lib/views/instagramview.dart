@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 import '../utils/drawermenu.dart';
-import '../utils/navegationbar.dart';
+import '../utils/navigationbar.dart';
 import 'creditsview.dart';
 
 /// Clase MyInstragram, contiene todos los elementos del layout de instragram
-class MyInstragram extends StatelessWidget {
-  const MyInstragram({super.key});
+class MyInstagram extends StatelessWidget {
+  const MyInstagram.MyInstagram({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -62,7 +62,7 @@ class MyInstragram extends StatelessWidget {
         /**
          * Llamo al navigatonBar para que se muestre en la app
          */
-        bottomNavigationBar: const NavegationBar(),
+        bottomNavigationBar: const Navigation(),
         body:
             Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
           Expanded(

@@ -46,7 +46,7 @@ class DrawerMenu extends StatelessWidget {
               Navigator.pop(context);
               Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const MyInstragram()),);
+                  MaterialPageRoute(builder: (context) => const MyInstagram.MyInstagram()),);
             },
           ),
           ListTile(
