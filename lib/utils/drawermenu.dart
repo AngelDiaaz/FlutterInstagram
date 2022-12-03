@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../views/creditsview.dart';
 import '../views/inicioview.dart';
 import '../views/instagramview.dart';
 
@@ -10,40 +11,40 @@ class DrawerMenu extends StatelessWidget {
     return Drawer(
       child: ListView(
         children: <Widget>[
-          const UserAccountsDrawerHeader(
-            accountName: null,
+          const DrawerHeader(
             decoration: BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage("./assets/images/instragram.jpg"),
-                    fit: BoxFit.cover)), accountEmail: null,
+                    fit: BoxFit.cover)), child: null,
           ),
-          Ink(
-            color: const Color.fromRGBO(193, 53, 132, 100),
-            child: ListTile(
+          ListTile(
               title: const Text(
                 "Inicio",
-                style: TextStyle(color: Colors.white),
               ),
               onTap: () {
                 Navigator.pop(context);
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => SecondRoute()),);
+                  MaterialPageRoute(builder: (context) => const Inicio()),);
               },
             ),
-          ),
           ListTile(
             title: const Text("Instagram"),
             onTap: () {
               Navigator.pop(context);
               Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const MyStatefulWidget()),);
+                  MaterialPageRoute(builder: (context) => const MyInstragram()),);
             },
           ),
           ListTile(
             title: const Text("Créditos"),
-            onTap: () {},
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Fin()),);
+            },
           ),
         ],
       ),

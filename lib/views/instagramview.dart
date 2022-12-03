@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 import '../utils/drawermenu.dart';
 import '../utils/navegationbar.dart';
+import 'creditsview.dart';
 
-class MyStatefulWidget extends StatelessWidget {
-  const MyStatefulWidget({super.key});
+class MyInstragram extends StatelessWidget {
+  const MyInstragram({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +23,12 @@ class MyStatefulWidget extends StatelessWidget {
             ),
           ),
           leading: GestureDetector(
-            onTap: () {},
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Fin()),);
+            },
             child: const Icon(
               Icons.arrow_back_ios_outlined,
               color: Colors.black, // add custom icons also

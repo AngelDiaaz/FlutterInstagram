@@ -1,10 +1,10 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:instagramview/utils/drawermenu.dart';
 
-import 'instagramview.dart';
-
-class Inicio extends StatelessWidget {
-  const Inicio({super.key});
+class Fin extends StatelessWidget {
+  const Fin({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class Inicio extends StatelessWidget {
           backgroundColor: const Color.fromRGBO(193, 53, 132, 70),
           title: const Center(
             child: Text(
-              'Inicio Instagram',
+              'Créditos Instagram',
               style: TextStyle(
                   color: Colors.white,
                   fontFamily: 'Alexandria',
@@ -49,27 +49,37 @@ class Inicio extends StatelessWidget {
             child: Column(
               children: [
                 const Center(
-                  child:
-                      Text('Hola Francis, bienvenido al layout de Instragram.'
-                          '\n  Pulsa el botón de abajo o navega a través del'
-                          '\n      drawer en la esquina superior derecha.',
-                          style: TextStyle(fontSize: 18, fontFamily: 'Kalam', fontStyle: FontStyle.italic),),
+                  child: Text(
+                    'Trabajó realizado por Ángel Díaz Avilés',
+                    style: TextStyle(
+                        fontSize: 18,
+                        fontFamily: 'Kalam',
+                        fontStyle: FontStyle.italic),
+                  ),
+                ),
+                const Padding(
+                  padding: EdgeInsets.all(20),
+                  child: Text(
+                    'Pulsa el botón de abajo para salir',
+                    style: TextStyle(
+                        fontSize: 18,
+                        fontFamily: 'Kalam',
+                        fontStyle: FontStyle.italic),
+                  ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(50),
+                  padding: const EdgeInsets.all(30),
                   child: MaterialButton(
                     padding: const EdgeInsets.all(30),
                     height: 50,
                     minWidth: 196,
                     color: const Color.fromRGBO(193, 53, 132, 70),
-                    onPressed: () {
-                      Navigator.pop(context);
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const MyInstragram()),);
-                    },
+                    /**
+                     * Al pulsar se cierra la app
+                     */
+                    onPressed: () => exit(0),
                     child: const Text(
-                      'Layout Instragram',
+                      'Fin Instragram',
                       style: TextStyle(
                           fontSize: 16,
                           color: Colors.white,

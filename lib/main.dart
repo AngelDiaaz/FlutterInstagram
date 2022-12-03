@@ -21,7 +21,7 @@ class _PrincipalView extends State<MyApp> {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Instagram',
-        home: SecondRoute()
+        home: Inicio()
         // Scaffold(
         //   endDrawer: const DrawerMenu(),
         //   appBar: AppBar(
