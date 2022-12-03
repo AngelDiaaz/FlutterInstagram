@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher_string.dart';
-import 'drawermenu.dart';
-import 'navegationbar.dart';
+import '../utils/drawermenu.dart';
+import '../utils/navegationbar.dart';
 
 class MyStatefulWidget extends StatelessWidget {
   const MyStatefulWidget({super.key});

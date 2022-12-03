@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'utils/instagramview.dart';
+import 'views/instagramview.dart';
 import 'utils/drawermenu.dart';
 import 'utils/navegationbar.dart';
-import 'utils/inicioview.dart';
+import 'views/inicioview.dart';
 
 void main() {
   runApp(const MyApp());

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'inicioview.dart';
-import 'instagramview.dart';
+import '../views/inicioview.dart';
+import '../views/instagramview.dart';
 
 class DrawerMenu extends StatelessWidget {
   const DrawerMenu({super.key});
@@ -14,11 +14,11 @@ class DrawerMenu extends StatelessWidget {
             accountName: null,
             decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage("./assets/images/trendencias.jpg"),
+                    image: AssetImage("./assets/images/instragram.jpg"),
                     fit: BoxFit.cover)), accountEmail: null,
           ),
           Ink(
-            color: Colors.purple,
+            color: const Color.fromRGBO(193, 53, 132, 100),
             child: ListTile(
               title: const Text(
                 "Inicio",
