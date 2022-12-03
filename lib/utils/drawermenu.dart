@@ -10,6 +10,11 @@ class DrawerMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      /**
+       * Ajusto el color y el tamaño del drawer
+       */
+      backgroundColor: const Color.fromRGBO(219, 219, 219, 1),
+      width: 250,
       child: ListView(
         children: <Widget>[
           const DrawerHeader(
@@ -20,7 +25,7 @@ class DrawerMenu extends StatelessWidget {
           ),
           ListTile(
               title: const Text(
-                "Inicio",
+                "Inicio", style: TextStyle(fontSize: 16),
               ),
             /**
              * Al pulsar se abre la pestaña de inicio
@@ -33,7 +38,7 @@ class DrawerMenu extends StatelessWidget {
               },
             ),
           ListTile(
-            title: const Text("Instagram"),
+            title: const Text("Instagram", style: TextStyle(fontSize: 16)),
             /**
              * Al pulsar se abre la pestaña del layout de instragram
              */
@@ -45,7 +50,7 @@ class DrawerMenu extends StatelessWidget {
             },
           ),
           ListTile(
-            title: const Text("Créditos"),
+            title: const Text("Créditos", style: TextStyle(fontSize: 16)),
             /**
              * Al pulsar se abre la pestaña de los creditos
              */
