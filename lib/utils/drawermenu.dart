@@ -20,7 +20,7 @@ class DrawerMenu extends StatelessWidget {
           const DrawerHeader(
             decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage("./assets/images/instragram.jpg"),
+                    image: AssetImage("./assets/images/instagram.jpg"),
                     fit: BoxFit.cover)), child: null,
           ),
           ListTile(
@@ -40,7 +40,7 @@ class DrawerMenu extends StatelessWidget {
           ListTile(
             title: const Text("Instagram", style: TextStyle(fontSize: 16)),
             /**
-             * Al pulsar se abre la pestaña del layout de instragram
+             * Al pulsar se abre la pestaña del layout de instagram
              */
             onTap: () {
               Navigator.pop(context);

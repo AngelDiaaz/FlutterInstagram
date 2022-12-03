@@ -54,7 +54,7 @@ class Inicio extends StatelessWidget {
               children: [
                 const Center(
                   child: Text(
-                    'Hola Francis, bienvenido al layout de Instragram.'
+                    'Hola Francis, bienvenido al layout de Instagram.'
                     '\n  Pulsa el botón de abajo o navega a través del'
                     '\n      drawer en la esquina superior derecha.',
                     style: TextStyle(
@@ -71,7 +71,7 @@ class Inicio extends StatelessWidget {
                     minWidth: 196,
                     color: const Color.fromRGBO(193, 53, 132, 0.6),
                     /**
-                     * Dirige al layout de instragram al pulsar el boton
+                     * Dirige al layout de instagram al pulsar el boton
                      */
                     onPressed: () {
                       Navigator.pop(context);
@@ -82,7 +82,7 @@ class Inicio extends StatelessWidget {
                       );
                     },
                     child: const Text(
-                      'Layout Instragram',
+                      'Layout Instagram',
                       style: TextStyle(
                           fontSize: 16,
                           color: Colors.white,

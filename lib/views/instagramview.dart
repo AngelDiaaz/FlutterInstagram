@@ -4,7 +4,7 @@ import '../utils/drawermenu.dart';
 import '../utils/navigationbar.dart';
 import 'creditsview.dart';
 
-/// Clase MyInstragram, contiene todos los elementos del layout de instragram
+/// Clase MyInstagram, contiene todos los elementos del layout de instagram
 class MyInstagram extends StatelessWidget {
   const MyInstagram.MyInstagram({super.key});
 
@@ -84,7 +84,7 @@ class MyInstagram extends StatelessWidget {
                                 width: 110,
                                 height: 110,
                                 /**
-                                 * Para que se muestre el circulo gris simulando a la historia de instragram
+                                 * Para que se muestre el circulo gris simulando a la historia de instagram
                                  */
                                 decoration: BoxDecoration(
                                   shape: BoxShape.circle,

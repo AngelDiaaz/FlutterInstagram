@@ -83,7 +83,7 @@ class Fin extends StatelessWidget {
                      */
                     onPressed: () => exit(0),
                     child: const Text(
-                      'Fin Instragram',
+                      'Fin Instagram',
                       style: TextStyle(
                           fontSize: 16,
                           color: Colors.white,
